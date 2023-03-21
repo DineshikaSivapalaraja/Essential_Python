@@ -1,64 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# <center>
-#     <img src="https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/IBMDeveloperSkillsNetwork-PY0101EN-SkillsNetwork/IDSNlogo.png" width="300" alt="cognitiveclass.ai logo"  />
-# </center>
-# 
-# # Writing Your First Python Code
-# 
-# Estimated time needed: **25** minutes
-# 
-# ## Objectives
-# 
-# After completing this lab you will be able to:
-# 
-# *   Write basic code in Python
-# *   Work with various types of data in Python
-# *   Convert the data from one type to another
-# *   Use expressions and variables to perform operations
-# 
-
-# <h2>Table of Contents</h2>
-# <div class="alert alert-block alert-info" style="margin-top: 20px">
-#     <ul>
-#         <li>
-#             <a href="https://#hello">Say "Hello" to the world in Python</a>
-#             <ul>
-#                 <li><a href="https://version/?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkPY0101ENSkillsNetwork19487395-2021-01-01">What version of Python are we using?</a></li>
-#                 <li><a href="https://comments/?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkPY0101ENSkillsNetwork19487395-2021-01-01">Writing comments in Python</a></li>
-#                 <li><a href="https://errors/?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkPY0101ENSkillsNetwork19487395-2021-01-01">Errors in Python</a></li>
-#                 <li><a href="https://python_error/?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkPY0101ENSkillsNetwork19487395-2021-01-01">Does Python know about your error before it runs your code?</a></li>
-#                 <li><a href="https://exercise/?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkPY0101ENSkillsNetwork19487395-2021-01-01">Exercise: Your First Program</a></li>
-#             </ul>
-#         </li>
-#         <li>
-#             <a href="https://#types_objects">Types of objects in Python</a>
-#             <ul>
-#                 <li><a href="https://int/?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkPY0101ENSkillsNetwork19487395-2021-01-01">Integers</a></li>
-#                 <li><a href="https://float/?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkPY0101ENSkillsNetwork19487395-2021-01-01">Floats</a></li>
-#                 <li><a href="https://convert/?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkPY0101ENSkillsNetwork19487395-2021-01-01">Converting from one object type to a different object type</a></li>
-#                 <li><a href="https://bool/?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkPY0101ENSkillsNetwork19487395-2021-01-01">Boolean data type</a></li>
-#                 <li><a href="https://exer_type/?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkPY0101ENSkillsNetwork19487395-2021-01-01">Exercise: Types</a></li>
-#             </ul>
-#         </li>
-#         <li>
-#             <a href="https://#https://exp/?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkPY0101ENSkillsNetwork19487395-2021-01-01ressions">Expressions and Variables</a>
-#             <ul>
-#                 <li><a href="exp">Expressions</a></li>
-#                 <li><a href="https://exer_exp/?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkPY0101ENSkillsNetwork19487395-2021-01-01">Exercise: Expressions</a></li>
-#                 <li><a href="https://var/?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkPY0101ENSkillsNetwork19487395-2021-01-01">Variables</a></li>
-#                 <li><a href="https://exer_exp_var/?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkPY0101ENSkillsNetwork19487395-2021-01-01">Exercise: Expression and Variables in Python</a></li>
-#             </ul>
-#         </li>
-#     </ul>
-#     <p>
-#         Estimated time needed: <strong>25 min</strong>
-#     </p>
-# </div>
-# 
-# <hr>
-# 
 
 # <h2 id="hello">Say "Hello" to the world in Python</h2>
 # 
@@ -924,32 +866,5 @@ y = (3 + 2) * 2 #10
 # ```python
 # 17
 # 
-# ```
-# 
-# </details>
-# 
 
-# <hr>
-# <h2>The last exercise!</h2>
-# <p>Congratulations, you have completed your first lesson and hands-on lab in Python. However, there is one more thing you need to do. The Data Science community encourages sharing work. The best way to share and showcase your work is to share it on GitHub. By sharing your notebook on GitHub you are not only building your reputation with fellow data scientists, but you can also show it off when applying for a job. Even though this was your first piece of work, it is never too early to start building good habits. So, please read and follow <a href="https://cognitiveclass.ai/blog/data-scientists-stand-out-by-sharing-your-notebooks/?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkPY0101ENSkillsNetwork19487395-2021-01-01" target="_blank">this article</a> to learn how to share your work.
-# <hr>
-# 
 
-# ## Author
-# 
-# <a href="https://www.linkedin.com/in/joseph-s-50398b136/?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkPY0101ENSkillsNetwork19487395-2021-01-01" target="_blank">Joseph Santarcangelo</a>
-# 
-# ## Other contributors
-# 
-# <a href="https://www.linkedin.com/in/jiahui-mavis-zhou-a4537814a?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkPY0101ENSkillsNetwork19487395-2021-01-01">Mavis Zhou</a>
-# 
-# ## Change Log
-# 
-# | Date (YYYY-MM-DD) | Version | Changed By | Change Description                 |
-# | ----------------- | ------- | ---------- | ---------------------------------- |
-# | 2020-08-26        | 2.0     | Lavanya    | Moved lab to course repo in GitLab |
-# |                   |         |            |                                    |
-# |                   |         |            |                                    |
-# 
-# ## <h3 align="center"> © IBM Corporation 2020. All rights reserved. <h3/>
-# 
